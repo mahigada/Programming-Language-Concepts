@@ -17,6 +17,8 @@ wow
 Because both of those words appeared most frequently in the input.
 If there is no input, your program should generate no output.
 */
+//Mahi Gada
+//CS280
 #include <iostream>
 #include <string>
 #include <map>
