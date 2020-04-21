@@ -9,7 +9,8 @@ LENGTH OF LONGEST LINE: n2
 NUMBER OF INTEGERS: n3
 ... where n1, n2, n3 are the counts your program kept when processing input.
 **/
-
+//Mahi Gada
+//CS280
 #include <iostream>
 #include <sstream>
 using namespace std;
