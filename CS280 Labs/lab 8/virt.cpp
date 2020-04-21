@@ -1,3 +1,23 @@
+/*
+You are given code with some class definitions that classify musical instruments.
+There's an Instrument, and a subclass for each of the types of instrument (String, Woodwind, Brass and Percussion).
+For the assignment, write class definitions for real instruments: Violin, Piano, Trumpet, Trombone and TenorSax. 
+Make these real instruments be subclasses of the instrument type classes
+// A Violin is a String
+// A Piano is a Percussion
+[yes. yes it is. a piano has a hammer that strikes something to make a noise. that's percussion]
+// A Trumpet is a Brass
+// A Trombone is a Brass
+// A TenorSax is a Woodwind
+Add virtual functions to the base class to indicate that a given instrument is String, Woodwind, Brass or Percussion. 
+These functions should be pure virtual and should return a boolean value.
+Add implementations in the derived classes for the four types of instruments
+Using the virtual functions, iterate through the vector, count, and print
+the number of Percussion, String, Brass and Woodwind instruments, in that order,
+one number per output line.
+*/
+//Mahi Gada
+//CS280
 #include <iostream>
 #include <string>
 #include <vector>
