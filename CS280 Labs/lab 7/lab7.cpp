@@ -17,6 +17,8 @@ fib2(20) called X times
 Run and time both versions of the function when it calculates fib(20). 
 Call each version of the function 1000 times, and print out the timing result to see the advantage of precalculation and caching.
 */
+//Mahi Gada
+//CS280
 #include <iostream>
 using namespace std;
 
