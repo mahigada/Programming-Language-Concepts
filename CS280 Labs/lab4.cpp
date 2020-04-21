@@ -11,6 +11,8 @@ If no file name is provided, the program should use the standard input instead o
 If the file cannot be opened, print "CANNOT OPEN " followed by a space and the filename, and stop.
 The program should ignore any extra command line arguments that are provided after the file name.
 **/
+//Mahi Gada
+//CS280
 #include <fstream>
 #include <sstream>
 #include <iostream>
