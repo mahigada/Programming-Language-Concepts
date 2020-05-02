@@ -1,0 +1,117 @@
+/*
+ * pt.h
+ */
+
+#ifndef PT_H_
+#define PT_H_
+
+#include <iostream>
+#include <vector>
+#include <map>
+#include <string>
+
+using std::vector;
+using std::map;
+using std::string;
+using std::cin;
+using std::cout;
+using std::cerr;
+using std::endl;
+
+#include "parse.h"
+#include "lex.h"
+
+class Pt {
+protected:
+	int	linenum;
+	Pt	*left;
+	Pt	*right;
+
+public:
+	Pt(int linenum, Pt *l = 0, Pt *r = 0)
+		: linenum(linenum), left(l), right(r) {}
+
+	virtual ~Pt() {
+		delete left;
+		delete right;
+	}
+
+	int GetLineNumber() const { return linenum; }
+
+    virtual bool isPlus() const { return false; }
+    virtual bool isEq() const { return false; }
+	virtual bool isIdent() const { return false; }
+	virtual bool isVar() const { return false; }
+	virtual string getId() const { return ""; }
+
+};
+
+class StmtList : public Pt {
+public:
+	StmtList(Pt *l, Pt *r) : Pt(0, l, r) {}
+};
+
+class Print : public Pt {
+public:
+	Print(int line, Pt *e) : Pt(line, e) {}
+};
+
+class Println : public Pt {
+// FIXME add code
+};
+
+class Repeat : public Pt {
+// FIXME add code
+
+};
+
+class Assign : public Pt {
+ // FIXME add code
+
+};
+
+class PlusExpr : public Pt {
+public:
+// FIXME add code
+
+};
+
+class MinusExpr : public Pt {
+// FIXME add code
+
+};
+
+class TimesExpr : public Pt {
+// FIXME add code
+
+};
+
+class DivideExpr : public Pt {
+// FIXME add code
+
+};
+
+class IConst : public Pt {
+	int val;
+
+public:
+	IConst(Tok& t) : Pt(t.GetLinenum()) {
+		val = stoi(t.GetLexeme());
+	}
+};
+
+class SConst : public Pt {
+	string val;
+
+public:
+	SConst(Tok& t) : Pt(t.GetLinenum()) {
+		val = t.GetLexeme();
+	}
+};
+
+class Ident : public Pt {
+// FIXME add code
+
+};
+
+#endif /* PT_H_ */
