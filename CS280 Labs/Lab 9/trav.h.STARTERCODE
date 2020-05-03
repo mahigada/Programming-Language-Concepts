@@ -1,0 +1,33 @@
+#include <map>
+#include <iostream>
+
+class Tree {
+    Tree	*left;
+    Tree	*right;
+    int		node;
+    
+    static std::map<int, Tree*> allNodes;
+    
+public:
+    Tree(int n, Tree *l=0, Tree *r=0) : left(l), right(r), node(n) {
+        allNodes[n] = this;
+    }
+    
+    int GetNode() { return node; }
+    
+    void Insert(Tree *newnode) {
+        // insert code to Insert newnode into tree pointed to by this... return the tree
+        if( newnode->node == this->node )
+            ; // skip dup
+        else // INSERT CODE HERE
+    }
+    
+    int Find(int node) {
+        // INSERT CODE HERE
+    }
+    
+    // print does an inorder search
+    void Print() {
+        // INSERT CODE HERE
+    }
+};
